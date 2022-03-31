@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Icurrentweather } from '../icurrentweather';
 
 @Component({
   selector: 'app-current-weather',
@@ -7,7 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CurrentWeatherComponent implements OnInit {
 
-  constructor() { }
+  current: Icurrentweather
+  constructor() { 
+    this.current = {
+      city: 'Redmond',
+      country: 'US',
+      date: new Date(),
+      image:'',
+      temperature: 59,
+      description: 'Rainy'
+    }
+
+  }
 
   ngOnInit(): void {
   }
