@@ -29,7 +29,7 @@ export class WeatherService {
     return {
       city: data.name,
       country: data.sys.country,
-      date: new Date(data.dt),
+      date: new Date(data.dt*1000),
       temperature: data.main.temp * 9/5 - 459.67,
       description: data.weather[0].description,
       image: `https://openweathermap.org/img/w/${data.weather[0].icon}.png`
